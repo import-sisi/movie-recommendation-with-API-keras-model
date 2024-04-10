@@ -31,19 +31,21 @@ p, div, input, label, h1, h2, h3, h4, h5, h6 {
     font-family: "Vazirmatn"!important;
     direction: RTL;
 }
-[data-testid="column"] img {
-    margin:0 auto;
-    width: calc(33.3333% - 1rem) !important;
-}
-[data-testid="column"] * {
-    text-align:center;
-}
-[data-testid="column"] {
-    text-align:center;
-    background:#fff;
-    box-shadow:0 0 8px #d9d9d9;
-    padding:10px;
-}
+@media(max-width:768px){
+    [data-testid="column"] img {
+        margin:0 auto;
+        width: calc(33.3333% - 1rem) !important;
+    }
+    [data-testid="column"] * {
+        text-align:center;
+    }
+    [data-testid="column"] {
+        text-align:center;
+        background:#fff;
+        box-shadow:0 0 8px #d9d9d9;
+        padding:10px;
+    }
+    }
 </style>
 """, unsafe_allow_html=True)
 st.header("فیلم مورد علاقه تو پیدا کن :)")
