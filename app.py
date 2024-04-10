@@ -93,10 +93,12 @@ def recommend(movie_title):
     return recommend_movie, recommend_poster
 
 if st.button("بزن تا بهت پیشنهاد بدم"):
-    movie_names, movie_posters = recommend(selectvalue)
-    if movie_names and movie_posters:
+    movie_names, movie_posters, movie_ids = recommend(selectvalue)
+    if movie_names and movie_posters and movie_ids:
         cols = st.columns(5)
-        for col, name, poster in zip(cols, movie_names, movie_posters):
+        for col, name, poster,movie_id in zip(cols, movie_names, movie_posters,movie_ids):
             with col:
+                link = f"https://www.themoviedb.org/movie/{movie_id}"
+                st.markdown(f"<a href='{link}' target='_blank'><img src='{poster}' alt='{name}' style='width:100%;'><br>{name}</a>", unsafe_allow_html=True)
                 st.text(name)
                 st.image(poster)
