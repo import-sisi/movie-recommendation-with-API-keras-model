@@ -59,6 +59,9 @@ p, div, input, label, h1, h2, h3, h4, h5, h6 {
     box-shadow:0 0 8px #d9d9d9;
     padding:10px;
 }
+h2 a {
+    left: 0;
+}
             </style>
 """, unsafe_allow_html=True)
 st.header("فیلم مورد علاقه تو پیدا کن :)")
