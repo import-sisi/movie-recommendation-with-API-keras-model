@@ -1,6 +1,8 @@
 # movie-recommendation-with-API-keras-model" 
 
 This notebook presents an advanced approach to building a movie recommendation system, integrating both traditional machine learning and deep learning techniques to enhance recommendation accuracy and relevance. The system starts with a traditional method using TF-IDF for feature extraction from movie descriptions and genres, combined with user ratings data to compute similarity scores between movies.
+![alt text](https://github.com/import-sisi/movie-recommendation-with-API-keras-model/blob/main/photo/Screenshot%202024-04-10%20150946.png)
+![alt text](https://github.com/import-sisi/movie-recommendation-with-API-keras-model/blob/main/photo/Screenshot%202024-04-10%20151142.png)
 
 Key Enhancements and Features:
 
