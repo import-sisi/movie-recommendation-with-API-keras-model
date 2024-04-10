@@ -101,7 +101,6 @@ if st.button("بزن تا بهت پیشنهاد بدم"):
         for col, name, poster,movie_id in zip(cols, movie_names, movie_posters,movie_ids):
             with col:
                 link = f"https://www.themoviedb.org/movie/{movie_id}"
-                st.markdown(f"<a href='{link}' target='_blank'>", unsafe_allow_html=True)
-                st.text(name)
-                st.image(poster)
-                st.markdown(f"</a>", unsafe_allow_html=True)
+                # Embedding the poster and name in a clickable link
+                st.markdown(f"<a href='{link}' target='_blank'><img src='{poster}' style='width:100%'><br>{name}</a>", unsafe_allow_html=True)
+
