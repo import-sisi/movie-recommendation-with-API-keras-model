@@ -24,10 +24,11 @@ st.markdown("""
 <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100..900&display=swap" rel="stylesheet">
 <style>
 body, html {
-  font-family: "Vazirmatn", sans-serif;
+    font-family: "Vazirmatn"!important;
     direction: RTL;
 }
 p, div, input, label, h1, h2, h3, h4, h5, h6 {
+    font-family: "Vazirmatn"!important;
     direction: RTL;
 }
 </style>
