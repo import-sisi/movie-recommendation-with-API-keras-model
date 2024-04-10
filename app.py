@@ -19,7 +19,7 @@ movie_similarity = pickle.load(open("movie_similarity.pkl", 'rb'))
 movies_titles = movie_data['title'].values
 
 
-st.header("Movie Recommender System")
+st.header("فیلم مورد علاقه تو پیدا کن :)")
 
 import streamlit.components.v1 as components
 
@@ -45,7 +45,7 @@ imageUrls = [
 
 
 imageCarouselComponent(imageUrls=imageUrls, height=200)
-selectvalue = st.selectbox("Select movie from dropdown", movies_titles)
+selectvalue = st.selectbox("فیلمی که دوست داری انتخاب کن", movies_titles)
 
 def recommend(movie_title):
     """Generate movie recommendations."""
@@ -63,7 +63,7 @@ def recommend(movie_title):
         recommend_poster.append(fetch_poster(movie_id))
     return recommend_movie, recommend_poster
 
-if st.button("Show Recommend"):
+if st.button("بزن تا بهت پیشنهاد بدم"):
     movie_names, movie_posters = recommend(selectvalue)
     if movie_names and movie_posters:
         cols = st.columns(5)
