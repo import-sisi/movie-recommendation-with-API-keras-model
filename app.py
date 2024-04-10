@@ -86,11 +86,13 @@ def recommend(movie_title):
     distances = sorted(list(enumerate(movie_similarity[index])), reverse=True, key=lambda x: x[1])
     recommend_movie = []
     recommend_poster = []
+    recommend_id = []
     for i in distances[1:6]:  # top 5 recommendations
         movie_id = movie_data.iloc[i[0]].id
         recommend_movie.append(movie_data.iloc[i[0]].title)
         recommend_poster.append(fetch_poster(movie_id))
-    return recommend_movie, recommend_poster
+        recommend_id.append(movie_id)
+    return recommend_movie, recommend_poster, recommend_id
 
 if st.button("بزن تا بهت پیشنهاد بدم"):
     movie_names, movie_posters, movie_ids = recommend(selectvalue)
