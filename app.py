@@ -31,9 +31,8 @@ p, div, input, label, h1, h2, h3, h4, h5, h6 {
     font-family: "Vazirmatn"!important;
     direction: RTL;
 }
-            [data-testid="column"] img {
+[data-testid="column"] img {
     margin:0 auto;
-    
     width: calc(33.3333% - 1rem) !important;
 }
 [data-testid="column"] * {
